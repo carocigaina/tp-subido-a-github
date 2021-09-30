@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Carolina Cigaina - Cátedra PWA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="favicon/x-icon" href="imagen/favicon.jpg"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+    <body id="body">
+        <div class="container mt-5">
+            <section class="contact-form">
+                <h3>Busque el clima de su ciudad</h3>
+
+                <form id="contact-form " class="mt-5">
+                    <label for="search">Ingrese una ciudad:</label>
+                    <input title="Search" id="search" value="" type="text" required />
+
+                    <button id="sendButton" type="button" class="btn btn-light">Enviar</button>
+                </form>
+            </section>
+        </div>
+
+        
+        <div id="main" class="container mt-5">
+            <div class="row">
+            <div class="card col-12 col-md-12 d-flex justify-content-center" style="width: 18rem;">
+                <img src="imagen/clima.jpg" class="card-img-top" alt="Imagen que refleja el estado del clima" id="img">
+                <div class="card-body">
+                  <h5 class="card-title">Resultados de la ciudad seleccionada:</h5>
+                
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" id="li1">Clima actual: </li>
+                  <li class="list-group-item" id="li2">Temperatura máxima: </li>
+                  <li class="list-group-item" id="li3">Temperatura minima: </li>
+                  <li class="list-group-item" id="li4">Humedad: </li>
+                  <li class="list-group-item" id="li5">Sensación Térmica: </li>
+                  <li class="list-group-item" id="li6">Presión Atmosférica: </li>
+                  <li class="list-group-item" id="li7">Velocidad del viento: </li>
+                </ul>
+                
+              </div>
+            </div>
+        </div>
+        <script src="js/main.js"></script>  
+    </body>
+</html>
