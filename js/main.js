@@ -16,7 +16,7 @@ var img=document.getElementById('img');
 
 boton.addEventListener("click", ()=>{
     
-    console.log('valor',input.value);
+    //console.log('valor',input.value);
     buscarClima(input.value);
 });
 
@@ -30,15 +30,17 @@ function buscarClima(ciudad){
     }).then(function(data){
         
         mostrarResult(data);
+        guardarResultados(data);
     }).catch(function(error){
         console.log('Hay un error',error);
     });
 
 };
+
 var tempMax,tempMin,humedad,sensacionTermica,presion,velViento,tipoClima,descripClima;
 function mostrarResult(data){
     
-    console.log(data);
+    //console.log(data);
     tempMax=data.main.temp_max;
     tempMin=data.main.temp_min;
     humedad=data.main.humidity;
@@ -59,3 +61,6 @@ function mostrarResult(data){
     img.src=`http://openweathermap.org/img/wn/${iconClima}@2x.png`;
 };
 
+function guardarResultados(data){
+    localStorage.setItem('resultados', JSON.stringify(data));
+};
