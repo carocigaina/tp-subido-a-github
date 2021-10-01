@@ -40,7 +40,7 @@ function buscarClima(ciudad){
 
 };
 
-var tempMax,tempMin,humedad,sensacionTermica,presion,velViento,tipoClima,descripClima;
+var tempMax,tempMin,humedad,sensacionTermica,presion,velViento,descripClima,iconClima;
 function mostrarResult(data){
     
     //console.log(data);
@@ -52,7 +52,7 @@ function mostrarResult(data){
     velViento=data.wind.speed;
     descripClima=data.weather[0]["description"];
     iconClima=data.weather[0]["icon"];
-    
+    /*iconClima.id="icon";*/
     
     li1.innerHTML= 'Clima actual: ' + descripClima;
     li2.innerHTML= 'Temperatura máxima: '+ tempMax;
