@@ -13,7 +13,10 @@ var li5=document.getElementById('li5');
 var li6=document.getElementById('li6');
 var img=document.getElementById('img');
 
-
+var result=JSON.parse(localStorage.getItem('resultados'));
+if (result != null){
+    mostrarResult(result);
+}
 boton.addEventListener("click", ()=>{
     
     //console.log('valor',input.value);
@@ -30,7 +33,7 @@ function buscarClima(ciudad){
     }).then(function(data){
         
         mostrarResult(data);
-        guardarResultados(data);
+        guardarResultados('resultados', data);
     }).catch(function(error){
         console.log('Hay un error',error);
     });
@@ -61,6 +64,6 @@ function mostrarResult(data){
     img.src=`http://openweathermap.org/img/wn/${iconClima}@2x.png`;
 };
 
-function guardarResultados(data){
-    localStorage.setItem('resultados', JSON.stringify(data));
+function guardarResultados(name, data){
+    localStorage.setItem(name, JSON.stringify(data));
 };
